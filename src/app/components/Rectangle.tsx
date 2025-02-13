@@ -3,5 +3,6 @@ interface RectangleProps {
 }
 
 export default function Rectangle({ color }: RectangleProps) {
-    return <div className={`w-80 h-32 bg-${color}-500`}></div>;
+    const bgColor = `bg-${color}-500`
+    return <div className={`${bgColor} w-80 h-32`}></div>;
 }

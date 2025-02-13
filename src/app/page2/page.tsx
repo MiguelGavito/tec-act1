@@ -4,7 +4,7 @@ import Rectangle from "../components/Rectangle";
 export default function Page2() {
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <Rectangle color="green" />
+      <Rectangle color='green' />
       <Link href="/" className="text-blue-500 hover:underline">
         Go to Home
       </Link>
