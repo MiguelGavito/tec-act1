@@ -1,12 +1,10 @@
 import Link from "next/link";
 import Rectangle from "../components/Rectangle";
 
-
-
-
 export default function Page2() {
   return (
     <div className="min-h-screen flex items-center justify-center">
+      <div>
       <table className="border-collapse">
         <tbody>
           <tr>
@@ -26,10 +24,13 @@ export default function Page2() {
           </tr>
         </tbody>
       </table>
-      <a>
-        \n
-      </a>
-      
+      </div>
+      <div className="grid grid-cols-3 gap-3">
+        {Array.from({length: 9}).map((_, index) => {
+          return <Rectangle key={index} color={index % 2 === 0 ? 'blue' : 'orange'} />;
+        })}
+      </div>
+
       <Link href="/" className="text-blue-500 hover:underline">
         Go to Home
       </Link>
